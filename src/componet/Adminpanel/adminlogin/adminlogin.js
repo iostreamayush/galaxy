@@ -58,8 +58,8 @@ function Login() {
     <div className="login-container">
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <input type="email" placeholder="enter your email..."  onChange={fun1} />
-        <input type="password" placeholder="enter your Password...."  onChange={fun2}/>
+        <input className="form-control" type="email" placeholder="enter your email..."  onChange={fun1} />
+        <input className="form-control" style={{width:"20rem"}} type="password" placeholder="enter your Password...."  onChange={fun2}/>
         <button onClick={login} type="submit">Login</button>
       </form>
     </div>
