@@ -1,0 +1,36 @@
+  <div className="container-fluid">
+                <div className="row">
+                    <div className="col-6">
+                    <i class="fa fa-facebook h2 float-start"></i>
+                    </div>
+                    <div className="col-6 ">
+                        <i class="fa fa-address-book h2 float-end">+91444 9999 55</i>
+                    </div>
+                </div>
+            </div>
+            <nav className="navbar navbar-expand-sm justify-content-center ">
+                <div className="container-fluid">
+                    <Link clasName="logo" href="#" id='logo'>Galaxy</Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="mynavbar">
+                        <ul className="navbar-nav me-auto h3" id='navlist'>
+                            <li className="nav-item">
+                                <Link className="nav-link" href="javascript:void(0)">Home</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" href="javascript:void(0)">Contact</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" href="javascript:void(0)">Product</Link>
+                            </li>
+                        </ul>
+                        <form className="d-flex">
+                            <input className="form-control m-2 " type="text" placeholder="Search" />
+                            <button className="btn btn-primary" type="button">Search</button>
+                        </form>
+                        <a class="bi bi-door-closed-fill "></a>
+                    </div>
+                </div>
+            </nav>
