@@ -10,6 +10,7 @@ import Login from './componet/Adminpanel/adminlogin/adminlogin';
 import Subcategory from './componet/Adminpanel/subacategory/Subcategory';
 import Navbar from './componet/frontend/navbar/navbar';
 import Homepage from './componet/frontend/homepage/Homepage';
+import Subproduct from './componet/frontend/subproduct/subproduct';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,7 @@ root.render(
       <Route exact path='/product' element={<Product/>}></Route>
       <Route exact path='/nav' element={<Navbar/>}></Route>
       <Route exact path='/' element={<Homepage/>}></Route>
+      <Route exact path='/subproduct' element={<Subproduct/>}></Route>
 
     </Routes>
     </BrowserRouter>

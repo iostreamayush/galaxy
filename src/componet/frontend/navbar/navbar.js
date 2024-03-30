@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link,  } from 'react-router-dom'
 import './navbar.css'
 import whatsapp from '../../../assest/whatsapp.jpeg'
 
@@ -57,21 +57,10 @@ const Navbar = () => {
             <Whatsapp />
         </>
     )
-
-
-
-
-
-
-
-
-
-
 }
-
+//---------------------------------------------Menu--------------------------------------------------------------
 const Menu = () => {
     const [catdata, setcatdata] = useState([]);
-    const [prodata, setprodata] = useState([]);
     useEffect(() => {
         loadrecord();
     }, [])
@@ -84,67 +73,31 @@ const Menu = () => {
         const data = await rec.json();
         setcatdata(data);
     }
-    //-----------subcategory-----------------
-    const onproduct = async (p) => {
-        const rec = await fetch("http://127.0.0.1:4001/probysubcate", {
-            method: "POST",
-            headers: { "content:type": "application/json" },
-            body: JSON.stringify({ scid: p })
-        })
-
-        const data = await rec.json();
-        setprodata(data);
-        console.log(data.length);
-
-    }
-
-
-
-
-
-
-
     return (
         <>
-
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark  ">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+            <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+                <div className="container-fluid">
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
+                    <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                        <ul className="navbar-nav">
+                            <li className="nav-item dropdown">
 
-                            {
-                            catdata.map((x) => {
-                                return (
-
-                                    <Link class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                                        to={"/subproduct/" + x._id}>{x.category}
-
-                                    </Link>
-
-                                )
-                            })}
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                 {
-                                prodata.map((x) => {
-                                    return (
-                                        <li><Link class="dropdown-item" onClick={() => { onproduct(x._id) }}>{x.sucat}</Link></li>
+                                    catdata.map((x) => {
+                                        return (
 
-                                    )
-                                })
-                            }
-                                   
-                                </ul>
+                                            <Link className="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                                to="/subproduct">{x.category}
+                                            </Link>
+                                        )
+                                    })}
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-
-
         </>
     )
 }
@@ -160,5 +113,25 @@ const Whatsapp = () => {
     )
 }
 
+
+// const Productpic = async (x) => {
+//     return (
+//         <>
+
+//             <div className="card ">
+//                 {/* <img className="img" src={"http://127.0.0.1:4001/" + x.img} /> */}
+//                 <div className="card-body">
+//                     <h4 className="card-title"></h4>
+//                     <p className="card-text h5">
+                        
+//                         <p>rrr</p>
+//                     </p>
+//                 </div>
+//             </div>
+//         </>
+
+//     )
+// }
+
 export default Navbar
-export { Menu, whatsapp, Header }
+export { Menu, whatsapp, Header, }
