@@ -11,6 +11,7 @@ import Subcategory from './componet/Adminpanel/subacategory/Subcategory';
 import Navbar from './componet/frontend/navbar/navbar';
 import Homepage from './componet/frontend/homepage/Homepage';
 import Subproduct from './componet/frontend/subproduct/subproduct';
+import Contact from './componet/frontend/contact us/contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,10 +23,10 @@ root.render(
       <Route exact path='/category' element={<Category/>}></Route>
       <Route exact path='/subcategory' element={<Subcategory/>}></Route>
       <Route exact path='/product' element={<Product/>}></Route>
-      <Route exact path='/nav' element={<Navbar/>}></Route>
       <Route exact path='/' element={<Homepage/>}></Route>
-      <Route exact path='/subproduct' element={<Subproduct/>}></Route>
-
+      <Route exact path='/nav' element={<Navbar/>}></Route>
+      <Route exact path='/subproduct/:id' element={<Subproduct/>}></Route>
+      <Route exact path='/contact' element={<Contact/>}></Route>
     </Routes>
     </BrowserRouter>
   </React.StrictMode>

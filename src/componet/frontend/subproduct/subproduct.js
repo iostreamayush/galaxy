@@ -9,15 +9,28 @@ const Subproduct = (x) => {
     },[]);
 
     const [catdata,setcatdata]=useState([]);
+    const [prodata,setprodata]=useState([]);
  
     const loadrecord=async()=>{
-        const rec = await fetch ("http://127.0.0.1:4001/probysubcat",{
+        const rec = await fetch ("http://127.0.0.1:4001/subcat",{
             method:"POST",
             headers:{"content-type":"application"},
             body:JSON.stringify({cateid:id})
         })
         const data =await rec.json();
         setcatdata(data);
+    }
+
+    const loadpro=async(p)=>{
+        const rec = await fetch ("http://127.0.0.1:4001/probysubcat",{
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({  scid: p })
+        })
+        const data = await rec.json();
+        setprodata(data);
+        console.log(data);
+        
     }
 
     return (
@@ -38,7 +51,7 @@ const Subproduct = (x) => {
                                         {
                                             catdata.map((x)=>{
                                                 return(
-                                                    <Link>{x.subcategory}</Link>
+                                                    <Link onClick={()=>{loadpro(x._id)}}>{x.subcategory}</Link>
                                                 )
                                             })
                                         }
@@ -50,8 +63,6 @@ const Subproduct = (x) => {
                     </div>
                 </div>
             </div>
-
-
         </>
     )
 }

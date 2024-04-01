@@ -26,13 +26,13 @@ const Navbar = () => {
 
     return (
         <>
-            <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
+            <nav class="navbar navbar-expand-sm navbar-dark  bg-dark">
+                <div class="container-fluid ">
+                    <Link class="navbar-brand" to="#">Navbar</Link>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse   " id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-4 fw-normal float-center ">
                             <li class="nav-item">
                                 <Link class="nav-link " aria-current="page" href="#">Home</Link>
@@ -47,14 +47,11 @@ const Navbar = () => {
                                 <Link class="nav-link " aria-current="page" href="#">product</Link>
                             </li>
                         </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+                       
                     </div>
                 </div>
             </nav>
-            <Whatsapp />
+            {/* <Whatsapp /> */}
         </>
     )
 }
@@ -89,7 +86,7 @@ const Menu = () => {
                                         return (
 
                                             <Link className="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                                                to="/subproduct">{x.category}
+                                                to={"/subproduct"+x._id}>{x.category}
                                             </Link>
                                         )
                                     })}

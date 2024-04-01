@@ -4,6 +4,7 @@ import c1 from "../../../assest/co2.jpeg"
 import c2 from "../../../assest/co3.jpeg"
 import c3 from "../../../assest/cor1.jpg"
 import Navbar, { Header, Menu } from '../navbar/navbar'
+import Footer from '../footer/Footer'
 const Homepage = () => {
     return (
         <>
@@ -42,7 +43,7 @@ const Homepage = () => {
                     </div>
                 </div>
 
-
+                    <Footer/>
             </div>
 
         </>

@@ -1,0 +1,29 @@
+.contact{
+    font-weight: 600;
+    color: hsl(0, 92%, 58%);
+    font-size: 4rem;
+}
+.contactpage{
+    border-bottom: 5px solid red;
+    font-size: 3rem;
+
+}
+.location{
+    font-size: 4rem;
+    color: red;
+}
+.locationbox{
+    margin: 1rem 1rem 1rem 6rem;
+}
+.loactionaddress{
+    font-size: 1rem;
+    padding-right: 3rem;
+}
+.section-form{
+    margin-left:6rem;
+}
+.btn-send{
+    background-color: #ff4c4c;
+    border-radius: 12px;
+    box-shadow: #ff4c4c;
+}

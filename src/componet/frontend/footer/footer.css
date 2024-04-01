@@ -1,0 +1,68 @@
+.footer{
+    background-color: rgb(35, 34, 34);
+    margin: 0;
+}
+.links{
+    text-align: center;
+    color:white;
+    margin: 2rem;
+    /* border-bottom: 0.2rem solid red; */
+
+}
+.links:hover{
+    border-bottom: 3px solid black;
+    padding-bottom: 3px;
+    color: wheat;
+
+}
+.linklist{
+    margin: auto;
+    text-align: center;
+    list-style: none;
+
+}
+
+.linkitems{
+  color: rgb(186, 183, 183);
+  text-decoration: none;
+  font-size:1.5rem;
+
+
+}
+.linkitems:hover{
+    color: wheat;
+    border-bottom: 3px solid black;
+    padding-bottom: 3px;
+}
+.followicons {
+    text-align: center;
+    font-size: 2rem;
+    overflow: hidden;
+    transform: matrix();
+
+
+}
+.followicons:hover{
+    color: red;
+}
+
+.listitems{
+    margin:1.8rem;
+    text-align: center;
+}
+.footerend{
+  color: rgb(186, 183, 183);
+  text-align: center;
+  text-decoration: none;
+}
+.allright{
+    display: inline;
+
+}
+.allright:hover{
+    color: white;
+    cursor: context-menu;
+    border-bottom: 3px solid black;
+
+}
+
